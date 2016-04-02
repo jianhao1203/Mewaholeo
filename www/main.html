@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		
+		
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/webRequest.js"></script>
+		<script type="text/javascript" src="js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+            $(document).bind("mobileinit",function(){
+				$.mobile.loader.prototype.options.text = "";
+				$.mobile.loader.prototype.options.textVisible = false;
+            })
+        </script>
+        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+
+		  
+		
+		<script type="text/javascript">
+			dbmanager.initdb();
+			dbmanager.createTable();
+			var gcmregid;
+			
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var menuStatus;
+			
+            function onDeviceReady() {
+				//loading.startLoading();
+                document.addEventListener("backbutton", onBackKeyDown, false);
+				//gcmregid ='123456';
+
+				var push = PushNotification.init({ "android": {"senderID": "263977057230"},
+				"ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
+
+				push.on('registration', function(data) {
+					console.log(data.registrationId);
+					//alert(data.registrationId);
+					//  var link = "mailto:jianhao1203@gmail.com"
+					//		 + "&subject=testing"
+					//		 + "&body=" + escape(data.registrationId)
+					//;
+					
+					//window.location.href = link;
+					gcmregid =data.registrationId;
+				});
+
+				push.on('notification', function(data) {
+				console.log(data.message);
+				alert(data.title+" Message: " +data.message);
+				// data.title,
+				// data.count,
+				// data.sound,
+				// data.image,
+				// data.additionalData
+				});
+
+				push.on('error', function(e) {
+					console.log(e.message);
+					//loading.endLoading();
+				});
+            }
+            
+            function onBackKeyDown(e) {
+              e.preventDefault();
+              navigator.notification.confirm("Are you sure you want to exit ?", onConfirm, "Confirmation", "Yes,No");     
+            }
+            
+            function onConfirm(button) {
+                if(button==2){//If User selected No, then we just do nothing
+                    return;
+                 }else if(button==1){
+                    navigator.app.exitApp();// Otherwise we quit the app.
+                }
+            }
+        </script>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <div class="app" id="app">
+
+            <div class="content">
+                <div class="appLogoFrame">
+                    <img class="appLogo" src="img/logo.png"/>
+                </div>
+                <div class="loginDetails">
+                    <input class="loginTextBox" placeholder="USER NAME" type="text" maxlength="15" id="username"></input>
+                    
+                    <input class="pwdTextBox" placeholder="PASSWORD" type="password" maxlength="15" id="pwd"></input>
+                    
+                    <button class="btnLogin" onclick="login(gcmregid);">Login</button>
+                    
+                </div>  
+				<div class="copyrightbox">
+					<h3 class="copyrighttext" id="crtext"></h3>
+					
+				</div>
+            </div>
+        </div>
+		<script type="text/javascript">
+            app.initialize();
+			
+			setcopyrighttext();
+            $(document).ready(function(){
+                var marginleft=$(".app").width()/2-$(".appLogo").width()/2;
+                $(".appLogo").css("margin-left", marginleft);
+                $(".appLogo").show();
+            });
+        </script>
+    </body>
+</html>
