@@ -1,0 +1,122 @@
+
+.wrapperLV{
+    height: 60%;
+    width: 90%;
+    top: 32%;
+	bottom: 10%;
+	left: 5%;
+	right: 5%;
+    align-items: center;
+    background-color: #ffffff;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    /*bottom: 0%;*/
+    overflow:auto;
+	border-style: solid;
+    border-width: 2px;
+	border-radius: 5px;
+	border-color: #66CCFF;
+}
+
+.scroll-contentLV {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.scrollulLV{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    max-width: 100%;
+    text-align:left;
+}
+
+.listviewitemframeLV{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.listviewitemtitleLV{
+    color: #000000;
+    background-color: transparent;
+    font-weight: bold;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 2px 0px 0px 10px;
+    word-wrap:break-word;
+    text-overflow:clip;
+    overflow: hidden;
+}
+
+.listviewimgLV{
+    width: 14vw;
+    margin: 0px 0px 2px 0px;
+    height: auto;
+    display: block;
+}
+
+.listviewitemdetails1LV{
+    color: #4d2600;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3.4vw;
+    font-weight: normal;
+    line-height: 3.4vw;
+    text-align: justify;
+    margin: 0px 0px 0px 10px;
+    max-height: 15vw;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.listviewitemdetails2LV{
+    color: #000000;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3.2vw;
+    font-weight: normal;
+    line-height: 3.2vw;
+    text-align: justify;
+    margin: 3px 0px 0px 10px;
+    max-height: 15vw;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.listviewitemdetails3LV{
+    color: #000000;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3.2vw;
+    font-weight: normal;
+    line-height: 3.2vw;
+    text-align: justify;
+    margin: 3px 0px 10px 10px;
+    max-height: 15vw;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.scrollliLV {
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    height:auto;
+    min-height: 20vw;
+    max-width: 100%;
+    overflow: hidden;
+	/*border-radius: 5px;*/
+	border-color: #66CCFF;
+	border-top: 1px solid #66CCFF;
+}
+
+.scrollliLV:hover {
+    background-color: white;
+}
+
