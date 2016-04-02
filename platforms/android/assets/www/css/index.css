@@ -397,7 +397,7 @@ input:focus {
     position: absolute;
     height: 8%;
     width: 90%;
-    top: 16%;
+    top: 14%;
 	bottom: 10%;
 	left: 5%;
 	right: 5%;
@@ -412,9 +412,10 @@ input:focus {
 .headertext{
     position: absolute;
     width: 100%;
+	height: 100%;
     text-align:center;
+	align-items: center;
 	font-size: 5vw;
-	line-height:7%;
     border: none;
     color: white;
     font-family: "Helvetica";
