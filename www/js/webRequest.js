@@ -128,9 +128,9 @@ function loadleaverecord(){
 				timeout: apiTimeout,    
 				success: function(data){
 					//alert(data.length);
-					for (var x = 0; x < data.length; x++) {
-						$(".scrollulLV").append("<li class='scrollliLV'><table class='listviewitemframeLV' border='0'><tr><td><h1 class='listviewitemtitleLV'>"+ data[x].Name +" ("+data[x].Department+") </h1></td><td width=10%><img class='listviewimgLV' style='vertical-align:middle;' src='img/tick.png' onclick=\"approveOneByOne('"+data[x].tbl+"', '"+data[x].refno+"');\" ></td></tr><tr><td><p class='listviewitemdetails1LV'>"+data[x].From_date+" ~ "+data[x].To_date+"</p><p class='listviewitemdetails2LV'>"+data[x].Leave_type+"</p><p class='listviewitemdetails3LV'>Reason : "+data[x].Reason+"</p></td><td width=10% style='vertical-align: top;'><img class='listviewimgLV' style='vertical-align:middle;' src='img/delete.png' onclick=\"rejectOneByOne('"+data[x].tbl+"', '"+data[x].refno+"');\"></td></tr></table></li>");
-					}
+					//for (var x = 0; x < data.length; x++) {
+					//	$(".scrollulLV").append("<li class='scrollliLV'><table class='listviewitemframeLV' border='0'><tr><td><h1 class='listviewitemtitleLV'>"+ data[x].Name +" ("+data[x].Department+") </h1></td><td width=10%><img class='listviewimgLV' style='vertical-align:middle;' src='img/tick.png' onclick=\"approveOneByOne('"+data[x].tbl+"', '"+data[x].refno+"');\" ></td></tr><tr><td><p class='listviewitemdetails1LV'>"+data[x].From_date+" ~ "+data[x].To_date+"</p><p class='listviewitemdetails2LV'>"+data[x].Leave_type+"</p><p class='listviewitemdetails3LV'>Reason : "+data[x].Reason+"</p></td><td width=10% style='vertical-align: top;'><img class='listviewimgLV' style='vertical-align:middle;' src='img/delete.png' onclick=\"rejectOneByOne('"+data[x].tbl+"', '"+data[x].refno+"');\"></td></tr></table></li>");
+					//}
 					//loading.endLoading();
 					
 				},
