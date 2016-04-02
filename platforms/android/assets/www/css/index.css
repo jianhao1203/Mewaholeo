@@ -310,7 +310,7 @@ input:focus {
     height: 15%;
     background-color: #F18D1B;
     width: 40%;
-    font-size: 6vw;
+    font-size: 5.5vw;
     border: none;
     color: white;
     font-family: "Helvetica";
@@ -395,7 +395,7 @@ input:focus {
 /* Leave Page Style start*/
 .titleFrame{
     position: absolute;
-    height: 6%;
+    height: 8%;
     width: 90%;
     top: 16%;
 	bottom: 10%;
@@ -408,8 +408,6 @@ input:focus {
 	border-radius: 5px;
 	border-color: #66CCFF;
 }
-
-
 
 .headertext{
     position: absolute;
@@ -427,7 +425,7 @@ input:focus {
     position: absolute;
     height: 8%;
     width: 50%;
-    top: 22%;
+    top: 24%;
 	bottom: 10%;
 	left: 25%;
 	right: 25%;
