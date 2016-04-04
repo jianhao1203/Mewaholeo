@@ -396,17 +396,17 @@ input:focus {
 .titleFrame{
     position: absolute;
     height: 8%;
-    width: 90%;
+    width: 100%;
     top: 14%;
 	bottom: 10%;
-	left: 5%;
-	right: 5%;
+	/*left: 5%;
+	right: 5%;*/
     align-items: center;
-    background-color:#6666FF;
-	border-style: solid;
+    background-color:#ffaa00;
+	/*border-style: solid;
     border-width: 2px;
 	border-radius: 5px;
-	border-color: #66CCFF;
+	border-color: #B0E0E6;*/
 }
 
 .headertext{
@@ -452,7 +452,7 @@ input:focus {
 	border-radius: 5px;
 	border-color:#5181E8;
 	color: white;
-	font-size: 3vw;
+	font-size: 4vw;
     font-family: "times new roman";
 	box-shadow: 1px 1px 1px #585858;
 

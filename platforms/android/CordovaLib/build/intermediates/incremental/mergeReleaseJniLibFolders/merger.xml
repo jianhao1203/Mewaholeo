@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Phonegap Development\Mewaholeo\platforms\android\CordovaLib\src\main\jniLibs"/></dataSet><dataSet config="release"><source path="C:\Phonegap Development\Mewaholeo\platforms\android\CordovaLib\src\release\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/MOIMAC/Documents/Phonegap Development/For IOS/20160403 Latest/Mewaholeo/platforms/android/CordovaLib/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/Users/MOIMAC/Documents/Phonegap Development/For IOS/20160403 Latest/Mewaholeo/platforms/android/CordovaLib/src/release/jniLibs"/></dataSet></merger>
